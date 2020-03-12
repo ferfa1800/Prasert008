@@ -15,19 +15,19 @@ class StudentController extends Controller
     public function index()
     {
         //$student = Student::all();//แสดงข้อมูลทั้งหมด
-        //$typebooks = TypeBooks::orderBy('id','desc')->get();
-        //แสดงข้อมูลทั้งหมดเรียงจากน้อยไปมากโดยใช้ ID
+        
+       
         $count = Student::count();//นับจำนวนแถวทั้งหมด
         
         //แบ่งหน้า
-        //$student = Student::simplePaginate(3);
+        
         $student = Student::paginate(25);
                 
                 
         return view('student.index', [
                     'student'=> $student,
                     'count'=> $count
-        ]);//ส่งไปที่ view โฟลเดอร์ typebooks ไฟล์ index.blade.pnp
+        ]);
     }
     
     
@@ -96,7 +96,7 @@ class StudentController extends Controller
 
     public function destroy($id)
     {
-        //TypeBooks::find($id)->delate();
+       
         Student::destroy($id);
         return back();
     }

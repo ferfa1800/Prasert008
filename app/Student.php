@@ -8,7 +8,4 @@ class Student extends Model
 {
     protected $table = 'student';//กำหนดชื่อตารางให้ตรงกับฐานข้อมูล
     
-    //public function books(){
-        //return $this->hasMany(Books::class);//กำหนดความสัมพันธ์รูปแบบ one to many ไปยังตาราง books
-       
 }

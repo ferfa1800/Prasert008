@@ -13,20 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <table class="table table-striped">
-                ระบบการจัดการข้อมูลนักศึกษา
-                <tr>
-                    
-                    <th>คณะ</th>
-
-                </tr>  
-                @foreach ($facultys as $facultys)  
-                <tr>
-                            
-                            <td>{{$student->fac_id}}</td>
-                </tr>
-                @endforeach
+ 
                 </table>
             </div>
         </div>
